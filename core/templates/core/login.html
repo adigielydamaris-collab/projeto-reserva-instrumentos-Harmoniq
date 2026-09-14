@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Harmoniq — Login</title>
+
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+
+<body>
+
+    <div class="login-card">
+
+        <div class="auth-brand">
+
+            <div class="logo">♪</div>
+
+            <h3>Harmoniq</h3>
+
+            <p>
+                Acesse sua conta para solicitar empréstimos
+            </p>
+
+        </div>
+
+        <form action="#" method="post">
+
+            {% csrf_token %}
+
+            <div class="field">
+
+                <label for="email">
+                    E-mail
+                </label>
+
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="seu@email.com"
+                    required
+                >
+
+            </div>
+
+            <div class="field">
+
+                <label for="senha">
+                    Senha
+                </label>
+
+                <input
+                    id="senha"
+                    name="senha"
+                    type="password"
+                    placeholder="••••••••"
+                    required
+                >
+
+            </div>
+
+            <div class="options">
+
+                <label class="remember">
+
+                    <input
+                        type="checkbox"
+                        name="lembrar"
+                    >
+
+                    Lembrar de mim
+
+                </label>
+
+                <a href="#">
+                    Esqueceu a senha?
+                </a>
+
+            </div>
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                Entrar
+            </button>
+
+            <div class="divider">
+                ou
+            </div>
+
+            <button
+                type="button"
+                class="btn btn-outline"
+            >
+                Entrar com Google
+            </button>
+
+            <p class="security-hint">
+
+                <span class="dot"></span>
+
+                Conexão segura com criptografia (RNF02)
+
+            </p>
+
+        </form>
+
+        <p class="auth-foot">
+
+            Não tem conta?
+
+            <a href="#">
+                Cadastre-se
+            </a>
+
+        </p>
+
+    </div>
+
+</body>
+
+</html>
