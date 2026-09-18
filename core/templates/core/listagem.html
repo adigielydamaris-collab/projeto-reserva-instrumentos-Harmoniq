@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <body>
+        <div class="app-main">
+        <div class="app-bar">
+            <div>
+            <h3>Instrumentos</h3>
+            <p class="muted">Explore o acervo e solicite empréstimo em até 3 etapas</p>
+            </div>
+            <div class="search">
+            <input placeholder="Buscar por nome ou tipo…" readonly />
+            </div>
+        </div>
+
+        <div class="chips">
+            <span class="chip chip-on">Todos</span>
+            <span class="chip">Cordas</span>
+            <span class="chip">Sopro</span>
+            <span class="chip">Percussão</span>
+            <span class="chip">Teclas</span>
+        </div>
+
+        <div class="cards">
+            <article class="card">
+            <div class="card-art art-violao"><span>🎸</span></div>
+            <div class="card-body">
+                <div class="card-top">
+                <h4>Violão Tagima</h4>
+                <span class="pill pill-ok">Disponível</span>
+                </div>
+                <p class="muted">Cordas · Acústico</p>
+                <button class="btn btn-outline">Solicitar empréstimo</button>
+            </div>
+            </article>
+
+            <article class="card">
+            <div class="card-art art-violino"><span>🎻</span></div>
+            <div class="card-body">
+                <div class="card-top">
+                <h4>Violino Yamaha V3</h4>
+                <span class="pill pill-ok">Disponível</span>
+                </div>
+                <p class="muted">Cordas · Erudito</p>
+                <button class="btn btn-outline">Solicitar empréstimo</button>
+            </div>
+            </article>
+
+            <article class="card">
+            <div class="card-art art-sax"><span>🎷</span></div>
+            <div class="card-body">
+                <div class="card-top">
+                <h4>Saxofone Alto</h4>
+                <span class="pill pill-busy">Emprestado</span>
+                </div>
+                <p class="muted">Sopro · Metal</p>
+                <button class="btn btn-disabled" disabled>Indisponível</button>
+            </div>
+            </article>
+
+            <article class="card">
+            <div class="card-art art-teclado"><span>🎹</span></div>
+            <div class="card-body">
+                <div class="card-top">
+                <h4>Teclado Casio</h4>
+                <span class="pill pill-ok">Disponível</span>
+                </div>
+                <p class="muted">Teclas · 61 teclas</p>
+                <button class="btn btn-outline">Solicitar empréstimo</button>
+            </div>
+            </article>
+
+            <article class="card">
+            <div class="card-art art-bateria"><span>🥁</span></div>
+            <div class="card-body">
+                <div class="card-top">
+                <h4>Bateria Pearl</h4>
+                <span class="pill pill-busy">Emprestado</span>
+                </div>
+                <p class="muted">Percussão · Acústica</p>
+                <button class="btn btn-disabled" disabled>Indisponível</button>
+            </div>
+            </article>
+
+            <article class="card">
+            <div class="card-art art-mic"><span>🎤</span></div>
+            <div class="card-body">
+                <div class="card-top">
+                <h4>Microfone Shure</h4>
+                <span class="pill pill-ok">Disponível</span>
+                </div>
+                <p class="muted">Áudio · Vocal</p>
+                <button class="btn btn-outline">Solicitar empréstimo</button>
+            </div>
+            </article>
+        </div>
+        </div>
+    </div>
+    </body>
+    </html>
+{% endblock content %}

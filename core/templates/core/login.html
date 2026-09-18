@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Harmoniq — Login</title>
+    <title>Harmoniq - Login</title>
 
     <link rel="stylesheet" href="{% static 'css/style2.css' %}">
 </head>
@@ -87,7 +87,9 @@
                 type="submit"
                 class="btn btn-primary"
             >
-                Entrar
+                <a href="{% url 'core:home' %}">
+                    Entrar
+                </a>
             </button>
 
             <div class="divider">

@@ -6,3 +6,6 @@ def homeView(request):
 
 def login(request):
     return render(request, "core/login.html")
+
+def listagem(request):
+    return render(request, "core/listagem.html")
