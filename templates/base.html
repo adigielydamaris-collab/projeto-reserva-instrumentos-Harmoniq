@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% block extra_css %}{% endblock extra_css %}
   <title>Harmoniq · Home</title>
 </head>
 <body>
@@ -14,10 +15,36 @@
         {% include 'fragments/nav.html' %}
 
       <main class="app-main">
+        {% block header %}
+        <header class="hero-welcome">
+            <div>
+              <span class="kicker">Bem-vinda de volta</span>
+              <h3>Olá, Adigiely 👋</h3>
+              <p class="muted">
+                Pronta para tocar hoje? Veja o acervo, seus empréstimos
+                ativos e novidades do estúdio.
+              </p>
+              <div class="hero-cta">
+                <button class="btn btn-primary">+ Novo empréstimo</button>
+                <button class="btn btn-outline">Explorar acervo</button>
+              </div>
+            </div>
+            <div class="hero-illu">
+              <div class="illu-circle illu-a"></div>
+              <div class="illu-circle illu-b"></div>
+              <div class="illu-circle illu-c"></div>
+              <span class="illu-note n1">♪</span>
+              <span class="illu-note n2">♫</span>
+              <span class="illu-note n3">♩</span>
+            </div>
+          </header>
+        {% endblock header %}
+
         {% block content %}
         {% endblock content %}
       </main>
     </div>
   </div>
+  <script src="{% static 'js/style.js' %}"></script>
 </body>
 </html>
