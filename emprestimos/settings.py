@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'users',
     'core',
     'instrumentos',
+    'meus_emprestimos',
 
 ]
 
