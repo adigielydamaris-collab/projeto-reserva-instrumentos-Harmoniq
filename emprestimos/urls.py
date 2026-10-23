@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls', namespace='core')),
     path('instrumentos/', include('instrumentos.urls', namespace='instrumentos')),
+    path('meus_emprestimos/', include('meus_emprestimos.urls', namespace='meus_emprestimos')),
 ]
