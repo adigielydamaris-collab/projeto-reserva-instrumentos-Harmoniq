@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Emprestimos
 
-# Register your models here.
+@admin.register(Emprestimos)
+class EmprestimoAdmin(admin.ModelAdmin):
+    list_display = ["status"]
+   
