@@ -1,108 +1,106 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block extra_css %}
-  <link rel="stylesheet" href="{% static 'meus_emprestimos/css/meus_emprestimos.css' %}">
-{% endblock extra_css %}
+{% block header %}
+{% endblock header %}
 
 {% block content %}
-      <div class="app-main">
-      <div class="app-bar">
-        <div>
-          <h3>Meus empréstimos</h3>
-          <p class="muted">Acompanhe seus agendamentos e cancele quando precisar</p>
-        </div>
-        <button class="btn btn-primary sm">+ Novo empréstimo</button>
-      </div>
-
-      <div class="stats">
-        <div class="stat">
-          <span class="stat-num">3</span>
-          <span class="stat-lbl">Ativos</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">12</span>
-          <span class="stat-lbl">Concluídos</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">1</span>
-          <span class="stat-lbl">Hoje</span>
-        </div>
-      </div>
-
-      <table class="tbl">
-        <thead>
-          <tr>
-            <th>Instrumento</th>
-            <th>Data</th>
-            <th>Horário</th>
-            <th>Status</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <div class="cell">
-                <span class="mini-art">🎻</span>
-                <div>
-                  <strong>Violino Yamaha V3</strong>
-                  <p class="muted sm">Cordas</p>
-                </div>
-              </div>
-            </td>
-            <td>14/10/2025</td>
-            <td>11:00 – 12:00</td>
-            <td><span class="pill pill-ok">Confirmado</span></td>
-            <td class="right"><button class="btn btn-ghost sm">Cancelar</button></td>
-          </tr>
-          <tr>
-            <td>
-              <div class="cell">
-                <span class="mini-art">🎹</span>
-                <div>
-                  <strong>Teclado Casio</strong>
-                  <p class="muted sm">Teclas</p>
-                </div>
-              </div>
-            </td>
-            <td>18/10/2025</td>
-            <td>15:00 – 16:00</td>
-            <td><span class="pill pill-ok">Confirmado</span></td>
-            <td class="right"><button class="btn btn-ghost sm">Cancelar</button></td>
-          </tr>
-          <tr>
-            <td>
-              <div class="cell">
-                <span class="mini-art">🎷</span>
-                <div>
-                  <strong>Saxofone Alto</strong>
-                  <p class="muted sm">Sopro</p>
-                </div>
-              </div>
-            </td>
-            <td>22/10/2025</td>
-            <td>09:00 – 10:00</td>
-            <td><span class="pill pill-warn">Pendente</span></td>
-            <td class="right"><span class="muted sm">—</span></td>
-          </tr>
-          <tr>
-            <td>
-              <div class="cell">
-                <span class="mini-art">🎸</span>
-                <div>
-                  <strong>Violão Tagima</strong>
-                  <p class="muted sm">Cordas</p>
-                </div>
-              </div>
-            </td>
-            <td>02/10/2025</td>
-            <td>14:00 – 15:00</td>
-            <td><span class="pill pill-muted">Concluído</span></td>
-            <td class="right"><span class="muted sm">—</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="app-bar">
+  <div>
+    <h3>Meus empréstimos</h3>
+    <p class="muted">Acompanhe seus agendamentos e cancele quando precisar</p>
   </div>
+  <button class="btn btn-primary sm">+ Novo empréstimo</button>
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <span class="stat-num">3</span>
+    <span class="stat-lbl">Ativos</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">12</span>
+    <span class="stat-lbl">Concluídos</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">1</span>
+    <span class="stat-lbl">Hoje</span>
+  </div>
+</div>
+
+<div class="tbl-wrap">
+  <table class="tbl">
+    <thead>
+      <tr>
+        <th>Instrumento</th>
+        <th>Data</th>
+        <th>Horário</th>
+        <th>Status</th>
+        <th class="right">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="cell">
+            <span class="mini-art">🎻</span>
+            <div>
+              <strong>Violino Yamaha V3</strong>
+              <p class="muted sm">Cordas</p>
+            </div>
+          </div>
+        </td>
+        <td>14/10/2025</td>
+        <td>11:00 – 12:00</td>
+        <td><span class="pill pill-ok">Confirmado</span></td>
+        <td class="right"><button class="btn btn-ghost sm">Cancelar</button></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="cell">
+            <span class="mini-art">🎹</span>
+            <div>
+              <strong>Teclado Casio</strong>
+              <p class="muted sm">Teclas</p>
+            </div>
+          </div>
+        </td>
+        <td>18/10/2025</td>
+        <td>15:00 – 16:00</td>
+        <td><span class="pill pill-ok">Confirmado</span></td>
+        <td class="right"><button class="btn btn-ghost sm">Cancelar</button></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="cell">
+            <span class="mini-art">🎷</span>
+            <div>
+              <strong>Saxofone Alto</strong>
+              <p class="muted sm">Sopro</p>
+            </div>
+          </div>
+        </td>
+        <td>22/10/2025</td>
+        <td>09:00 – 10:00</td>
+        <td><span class="pill pill-warn">Pendente</span></td>
+        <td class="right"><span class="muted sm">—</span></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="cell">
+            <span class="mini-art">🎸</span>
+            <div>
+              <strong>Violão Tagima</strong>
+              <p class="muted sm">Cordas</p>
+            </div>
+          </div>
+        </td>
+        <td>02/10/2025</td>
+        <td>14:00 – 15:00</td>
+        <td><span class="pill pill-muted">Concluído</span></td>
+        <td class="right"><span class="muted sm">—</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 {% endblock content %}
