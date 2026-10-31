@@ -14,7 +14,7 @@
   }
   
   * { box-sizing: border-box; }
-  
+
   body {
     margin: 0;
     min-height: 100vh;
@@ -359,3 +359,159 @@
     .mini-card { grid-template-columns: 48px minmax(0, 1fr); gap: 8px; }
     .mini-card .pill { grid-column: 2; justify-self: start; }
   }
+
+
+
+/* ========================================================
+   TELA MEUS EMPRÉSTIMOS
+   ======================================================== */
+
+/* Cabeçalho da página (Título e botão na mesma linha) */
+.app-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.app-bar h3 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+}
+
+/* Botão pequeno e botão Cancelar */
+.btn.sm {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+  border-color: var(--line-2);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Cards de estatísticas (3 colunas com moldura e degradê) */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.stat-num {
+  font-size: 28px;
+  font-weight: 700;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.stat-lbl {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Tabela alinhada e com rolagem segura */
+.tbl-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tbl {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+.tbl thead th {
+  text-align: left;
+  padding: 12px 14px;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.tbl tbody td {
+  padding: 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.tbl tbody td:not(:first-child) {
+  white-space: nowrap;
+}
+
+.tbl tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.tbl .right {
+  text-align: right;
+}
+
+/* Célula do instrumento com ícone e texto */
+.cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cell strong {
+  font-size: 14px;
+}
+
+.mini-art {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: var(--grad-soft);
+  font-size: 20px;
+  border: 1px solid var(--line-2);
+}
+
+/* Tag Concluído */
+.pill-muted {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+  border: 1px solid var(--line-2);
+}
+
+/* Responsivo para celulares */
+@media (max-width: 560px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
